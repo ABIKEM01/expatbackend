@@ -65,7 +65,7 @@ const createUser = async (req, res) => {
     upperCase: false,
     specialChars: false,
   });
-  const link = `https://brilloapis.onrender.com/api/v1/users/verify?code=${verificationCode}`;
+  const link = `https://expatbackend.onrender.com/api/v1/users/verify?code=${verificationCode}`;
 
   const messageBody = verifytemplate({
     link: link,
@@ -322,7 +322,7 @@ const forgotPassword = async (req, res) => {
     // console.log("forgotToken", token);
 
     // generate resetUrl link using the token and id
-    const link = `https://cityshoppa-lemon.vercel.app/reset-password?id=${user._id}&token=${token}`;
+    const link = `https://expatswap.vercel.app/reset-password?id=${user._id}&token=${token}`;
 
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
